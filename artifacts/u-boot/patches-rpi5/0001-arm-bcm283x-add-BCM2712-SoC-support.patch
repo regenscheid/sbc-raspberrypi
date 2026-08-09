@@ -1,4 +1,4 @@
-From 91494d39e246f5214b0ff7ef606119cc07a009ca Mon Sep 17 00:00:00 2001
+From 006743f0dfd284b5ae1d16869533f845e1b2394c Mon Sep 17 00:00:00 2001
 From: appkins <13772502+appkins@users.noreply.github.com>
 Date: Mon, 16 Mar 2026 13:02:41 -0500
 Subject: [PATCH 01/11] arm: bcm283x: add BCM2712 SoC support

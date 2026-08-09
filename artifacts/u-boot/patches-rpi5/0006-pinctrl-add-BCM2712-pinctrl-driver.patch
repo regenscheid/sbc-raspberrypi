@@ -1,4 +1,4 @@
-From 6688cae2954954648e52adbede403ab52402d318 Mon Sep 17 00:00:00 2001
+From 7578eb4edce7f00cd70301fc558a02d638c98d9f Mon Sep 17 00:00:00 2001
 From: appkins <13772502+appkins@users.noreply.github.com>
 Date: Mon, 16 Mar 2026 13:02:42 -0500
 Subject: [PATCH 06/11] pinctrl: add BCM2712 pinctrl driver

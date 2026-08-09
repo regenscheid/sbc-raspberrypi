@@ -1,4 +1,4 @@
-From 766648a772548988ea1ff2af0c578ce8fb8062c7 Mon Sep 17 00:00:00 2001
+From 54846b5744e925c0652231157513146219e49157 Mon Sep 17 00:00:00 2001
 From: appkins <13772502+appkins@users.noreply.github.com>
 Date: Mon, 16 Mar 2026 13:02:42 -0500
 Subject: [PATCH 07/11] net: macb: add RP1 ethernet support
