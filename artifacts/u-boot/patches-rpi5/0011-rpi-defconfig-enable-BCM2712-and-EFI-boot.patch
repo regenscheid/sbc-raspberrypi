@@ -1,7 +1,7 @@
-From 9a803f71abd7c0c90d998fcf4687a274ff157d09 Mon Sep 17 00:00:00 2001
+From 63a4436113a8a0a6c43e5af48ac3eff77e0a8655 Mon Sep 17 00:00:00 2001
 From: appkins <13772502+appkins@users.noreply.github.com>
 Date: Mon, 16 Mar 2026 13:02:43 -0500
-Subject: [PATCH 11/11] rpi: defconfig: enable BCM2712 and EFI boot
+Subject: [PATCH] rpi: defconfig: enable BCM2712 and EFI boot
 
 Update rpi_arm64_defconfig to enable BCM2712 SoC support,
 RP1 peripherals, PCIe, NVMe, and EFI boot for Raspberry Pi 5.
@@ -10,14 +10,15 @@ Link: https://github.com/sidero-community/u-boot
 Signed-off-by: appkins <13772502+appkins@users.noreply.github.com>
 [Andrew Regenscheid: rebased onto v2026.07; dropped CONFIG_RESET_BRCMSTB and
  CONFIG_RESET_BRCMSTB_RESCAL, which are now enabled by default in
- rpi_arm64_defconfig upstream.]
+ rpi_arm64_defconfig upstream, and disabled the mkeficapsule host tool,
+ which since 2026.02 requires a GnuTLS built with PKCS#11 support.]
 Signed-off-by: Andrew Regenscheid <andrew@regenscheid.net>
 ---
- configs/rpi_arm64_defconfig | 28 ++++++++++++++++++++++++++--
- 1 file changed, 26 insertions(+), 2 deletions(-)
+ configs/rpi_arm64_defconfig | 32 ++++++++++++++++++++++++++++++--
+ 1 file changed, 30 insertions(+), 2 deletions(-)
 
 diff --git a/configs/rpi_arm64_defconfig b/configs/rpi_arm64_defconfig
-index cdcf05ea..156f5953 100644
+index cdcf05ea..9325203b 100644
 --- a/configs/rpi_arm64_defconfig
 +++ b/configs/rpi_arm64_defconfig
 @@ -4,7 +4,7 @@ CONFIG_ARCH_BCM283X=y
@@ -38,7 +39,7 @@ index cdcf05ea..156f5953 100644
  CONFIG_SYS_PBSIZE=1049
  # CONFIG_DISPLAY_CPUINFO is not set
  # CONFIG_DISPLAY_BOARDINFO is not set
-@@ -71,3 +71,27 @@ CONFIG_CONSOLE_SCROLL_LINES=10
+@@ -71,3 +71,31 @@ CONFIG_CONSOLE_SCROLL_LINES=10
  CONFIG_PHYS_TO_BUS=y
  CONFIG_MBEDTLS_LIB=y
  # CONFIG_HEXDUMP is not set
@@ -66,3 +67,7 @@ index cdcf05ea..156f5953 100644
 +CONFIG_PXE_UTILS=n
 +# Disable EFI bootmanager (reserves memory on 0x00080000 -> prevents continuing after being successful)
 +CONFIG_CMD_BOOTEFI_BOOTMGR=n
++# mkeficapsule is a build-host tool only; since u-boot 2026.02 it links
++# against the GnuTLS PKCS#11 API, which the bldr base image's GnuTLS is
++# not built with. Skipping it has no effect on u-boot.bin.
++# CONFIG_TOOLS_MKEFICAPSULE is not set
