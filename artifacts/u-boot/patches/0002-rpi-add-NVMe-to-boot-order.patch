@@ -1,4 +1,4 @@
-From f53b9a545132686b0286ce166203a57935502dbc Mon Sep 17 00:00:00 2001
+From 59291b80ac086ae7fbbb709018eeda5fceb25846 Mon Sep 17 00:00:00 2001
 From: Stefan Agner <stefan@agner.ch>
 Date: Tue, 29 Dec 2020 23:34:52 +0100
 Subject: [PATCH] rpi: add NVMe to boot order
@@ -7,19 +7,21 @@ The Compute Module 4 I/O Board can support a NVMe. Add NVMe to the boot
 order.
 
 Signed-off-by: Stefan Agner <stefan@agner.ch>
+[Andrew Regenscheid: refreshed context for u-boot 2026.01, where the
+ load-address block above boot_targets moved from 0x02xxxxxx to
+ 0x05xxxxxx and stopped the original hunk applying.]
+Signed-off-by: Andrew Regenscheid <andrew@regenscheid.net>
 ---
  board/raspberrypi/rpi/rpi.env | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/board/raspberrypi/rpi/rpi.env b/board/raspberrypi/rpi/rpi.env
-index 30228285ed..89f6c5a839 100644
+index 9ac9d676..f879df10 100644
 --- a/board/raspberrypi/rpi/rpi.env
 +++ b/board/raspberrypi/rpi/rpi.env
-@@ -74,4 +74,4 @@ pxefile_addr_r=0x02500000
- fdt_addr_r=0x02600000
- ramdisk_addr_r=0x02700000
+@@ -77,4 +77,4 @@ pxefile_addr_r=0x05500000
+ fdt_addr_r=0x05600000
+ ramdisk_addr_r=0x05700000
  
 -boot_targets=mmc usb pxe dhcp
 +boot_targets=mmc nvme usb pxe dhcp
--- 
-2.43.0
