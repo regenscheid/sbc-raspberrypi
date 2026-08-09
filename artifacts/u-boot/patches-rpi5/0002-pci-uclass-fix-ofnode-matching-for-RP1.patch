@@ -1,4 +1,4 @@
-From a86ca005c08de9c8deda2d4644eef999f00af1a3 Mon Sep 17 00:00:00 2001
+From 4a45e76fa151220d639c7d5ca50208715d2082b9 Mon Sep 17 00:00:00 2001
 From: appkins <13772502+appkins@users.noreply.github.com>
 Date: Mon, 16 Mar 2026 13:02:42 -0500
 Subject: [PATCH 02/11] pci: uclass: fix ofnode matching for RP1

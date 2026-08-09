@@ -1,4 +1,4 @@
-From 93ee865eff0813875d87c06c7999efa59ab21b35 Mon Sep 17 00:00:00 2001
+From 3bacd0857e3b3f329c9cdbad14b909aedff0bf87 Mon Sep 17 00:00:00 2001
 From: appkins <13772502+appkins@users.noreply.github.com>
 Date: Mon, 16 Mar 2026 13:02:43 -0500
 Subject: [PATCH 10/11] rpi: board: add RP1 init and boot config

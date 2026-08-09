@@ -1,7 +1,7 @@
-From 63a4436113a8a0a6c43e5af48ac3eff77e0a8655 Mon Sep 17 00:00:00 2001
+From 7e2c6be16f29186c69d35eda8efb8780a9fca04a Mon Sep 17 00:00:00 2001
 From: appkins <13772502+appkins@users.noreply.github.com>
 Date: Mon, 16 Mar 2026 13:02:43 -0500
-Subject: [PATCH] rpi: defconfig: enable BCM2712 and EFI boot
+Subject: [PATCH 11/11] rpi: defconfig: enable BCM2712 and EFI boot
 
 Update rpi_arm64_defconfig to enable BCM2712 SoC support,
 RP1 peripherals, PCIe, NVMe, and EFI boot for Raspberry Pi 5.

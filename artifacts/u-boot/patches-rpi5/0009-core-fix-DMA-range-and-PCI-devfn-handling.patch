@@ -1,4 +1,4 @@
-From 8df18e7c15e30c2b9f44ddbbe17bcb4c74a926f7 Mon Sep 17 00:00:00 2001
+From 3a06f60d5761f2177df69f168aca92c850eff2ea Mon Sep 17 00:00:00 2001
 From: appkins <13772502+appkins@users.noreply.github.com>
 Date: Mon, 16 Mar 2026 13:02:43 -0500
 Subject: [PATCH 09/11] core: fix DMA range and PCI devfn handling

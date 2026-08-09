@@ -1,4 +1,4 @@
-From a5ab48766f107616bbfe55c3591b798ef3bfaec1 Mon Sep 17 00:00:00 2001
+From 4de97520a39111bdee21c8fbe6ee6d4a412fd59f Mon Sep 17 00:00:00 2001
 From: appkins <13772502+appkins@users.noreply.github.com>
 Date: Mon, 16 Mar 2026 13:02:42 -0500
 Subject: [PATCH 04/11] clk: add RP1 clock driver
